@@ -1,0 +1,49 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: fasttrack-db
+    environment:
+      POSTGRES_USER: fasttrack
+      POSTGRES_PASSWORD: fasttrack
+      POSTGRES_DB: fasttrack
+    ports:
+      - "5432:5432"
+    volumes:
+      - fasttrack-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U fasttrack"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: fasttrack-backend
+    environment:
+      DATABASE_URL: postgresql+asyncpg://fasttrack:fasttrack@db:5432/fasttrack
+      DEBUG: "false"
+      CORS_ORIGINS: '["http://localhost:5173"]'
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    command: >
+      sh -c "poetry run alembic upgrade head && poetry run uvicorn core.server:app --host 0.0.0.0 --port 8000"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: fasttrack-frontend
+    environment:
+      VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  fasttrack-db-data:
