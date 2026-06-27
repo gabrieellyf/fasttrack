@@ -1,0 +1,73 @@
+# FastTrack — .gitignore
+
+# ── Sistema Operacional
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ── Windows
+*Zone.Identifier
+
+# ── IDEs
+.idea/
+*.iml
+
+# VS Code
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+!.vscode/extensions.json
+
+# ── Variáveis de Ambiente
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# ── Python / Backend
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Coverage
+.coverage
+backend/coverage.xml
+backend/htmlcov/
+backend/.pytest_cache/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+
+# Linter
+.ruff_cache/
+
+# Distribuição
+*.egg-info/
+dist/
+build/
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Docker
+docker-compose.override.yml
+
+# ── Logs
+*.log
+logs/
