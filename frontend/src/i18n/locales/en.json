@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "routing": "Routing",
+    "packages": "Packages",
+    "vehicles": "Vehicles",
+    "hubs": "Hubs",
+    "backToHub": "Back to Hub",
+    "collapse": "Collapse",
+    "expand": "Expand"
+  },
+  "hub": {
+    "title": "Central Hub",
+    "subtitle": "Select a feature to get started",
+    "routingDesc": "Calculate and compare Express, Economic and Strategic routes.",
+    "packagesDesc": "Create and manage delivery packages.",
+    "vehiclesDesc": "Manage the fleet and load capacity.",
+    "hubsDesc": "Administer distribution centers."
+  },
+  "header": {
+    "theme": {
+      "toggle": "Toggle theme",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "language": "Language"
+  },
+  "routing": {
+    "title": "Calculate Routes",
+    "subtitle": "Select a vehicle and packages to calculate all three route strategies.",
+    "vehicle": "Vehicle",
+    "vehiclePlaceholder": "— select a vehicle —",
+    "vehicleLoading": "Loading...",
+    "packages": "Packages",
+    "packagesSelected_zero": "none selected",
+    "packagesSelected_one": "{{count}} selected",
+    "packagesSelected_other": "{{count}} selected",
+    "packagesLoading": "Loading packages...",
+    "packagesEmpty": "No packages registered.",
+    "calculate": "Calculate Routes",
+    "calculating": "Calculating...",
+    "result": "Result",
+    "compareAll": "Compare all",
+    "stopSequence": "Stop sequence",
+    "stop": "Stop",
+    "strategies": {
+      "express": "Express",
+      "economic": "Economic",
+      "strategic": "Strategic"
+    },
+    "metrics": {
+      "totalDistance": "Total distance",
+      "totalCost": "Total cost",
+      "totalWeight": "Total weight",
+      "distanceUnit": "u",
+      "weightUnit": "kg"
+    },
+    "badges": {
+      "fastest": "Fastest",
+      "cheapest": "Cheapest",
+      "balanced": "Balanced"
+    },
+    "errors": {
+      "weightLimit": "Total weight {{total}}kg exceeds vehicle capacity ({{max}}kg).",
+      "notFound": "Vehicle or package not found.",
+      "network": "Connection error. Check if the API is running.",
+      "generic": "Error calculating routes."
+    },
+    "chart": {
+      "title": "Visualization — Cartesian Plane",
+      "hubCentral": "Central Hub",
+      "stops": "Stops",
+      "xAxis": "X",
+      "yAxis": "Y",
+      "tooltipCoords": "({{x}}, {{y}})"
+    }
+  },
+  "packages": {
+    "title": "Packages",
+    "loading": "Loading packages...",
+    "empty": "No packages registered.",
+    "columns": {
+      "recipient": "Recipient",
+      "x": "X",
+      "y": "Y",
+      "weight": "Weight (kg)",
+      "accessCost": "Access",
+      "actions": "Actions"
+    },
+    "actions": {
+      "remove": "Remove",
+      "confirmRemove": "Remove package?",
+      "confirmRemoveDesc": "This action cannot be undone.",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "toasts": {
+      "removed": "Package removed.",
+      "removeError": "Error removing package."
+    }
+  },
+  "vehicles": {
+    "title": "Vehicles",
+    "loading": "Loading vehicles...",
+    "empty": "No vehicles registered.",
+    "columns": {
+      "plate": "Plate",
+      "maxWeight": "Capacity (kg)",
+      "createdAt": "Registered on"
+    }
+  },
+  "hubs": {
+    "title": "Distribution Hubs",
+    "loading": "Loading hubs...",
+    "empty": "No hubs registered.",
+    "columns": {
+      "name": "Name",
+      "x": "X",
+      "y": "Y",
+      "type": "Type"
+    },
+    "types": {
+      "central": "Central",
+      "secondary": "Secondary"
+    }
+  },
+  "common": {
+    "error": "Error: {{message}}",
+    "loading": "Loading...",
+    "notFound": "Not found.",
+    "breadcrumb": "{{parent}} / {{child}}"
+  }
+}

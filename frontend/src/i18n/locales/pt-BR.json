@@ -1,0 +1,132 @@
+{
+  "nav": {
+    "routing": "Roteirização",
+    "packages": "Pacotes",
+    "vehicles": "Veículos",
+    "hubs": "Hubs",
+    "backToHub": "Voltar ao Hub",
+    "collapse": "Recolher",
+    "expand": "Expandir"
+  },
+  "hub": {
+    "title": "Hub Central",
+    "subtitle": "Selecione uma funcionalidade para começar",
+    "routingDesc": "Calcule e compare rotas Expressa, Econômica e Estratégica.",
+    "packagesDesc": "Cadastre e gerencie os pacotes de entrega.",
+    "vehiclesDesc": "Gerencie a frota e a capacidade de carga.",
+    "hubsDesc": "Administre os centros de distribuição."
+  },
+  "header": {
+    "theme": {
+      "toggle": "Alternar tema",
+      "light": "Claro",
+      "dark": "Escuro"
+    },
+    "language": "Idioma"
+  },
+  "routing": {
+    "title": "Calcular Rotas",
+    "subtitle": "Selecione o veículo e os pacotes para calcular as três estratégias de rota.",
+    "vehicle": "Veículo",
+    "vehiclePlaceholder": "— selecione um veículo —",
+    "vehicleLoading": "Carregando...",
+    "packages": "Pacotes",
+    "packagesSelected_zero": "nenhum selecionado",
+    "packagesSelected_one": "{{count}} selecionado",
+    "packagesSelected_other": "{{count}} selecionados",
+    "packagesLoading": "Carregando pacotes...",
+    "packagesEmpty": "Nenhum pacote cadastrado.",
+    "calculate": "Calcular Rotas",
+    "calculating": "Calculando...",
+    "result": "Resultado",
+    "compareAll": "Comparar todas",
+    "stopSequence": "Sequência de paradas",
+    "stop": "Parada",
+    "strategies": {
+      "express": "Expressa",
+      "economic": "Econômica",
+      "strategic": "Estratégica"
+    },
+    "metrics": {
+      "totalDistance": "Distância total",
+      "totalCost": "Custo total",
+      "totalWeight": "Peso total",
+      "distanceUnit": "u",
+      "weightUnit": "kg"
+    },
+    "badges": {
+      "fastest": "Mais rápida",
+      "cheapest": "Mais barata",
+      "balanced": "Equilibrada"
+    },
+    "errors": {
+      "weightLimit": "Peso total {{total}}kg excede a capacidade do veículo ({{max}}kg).",
+      "notFound": "Veículo ou pacote não encontrado.",
+      "network": "Erro de conexão. Verifique se a API está rodando.",
+      "generic": "Erro ao calcular rotas."
+    },
+    "chart": {
+      "title": "Visualização — Plano Cartesiano",
+      "hubCentral": "Hub Central",
+      "stops": "Paradas",
+      "xAxis": "X",
+      "yAxis": "Y",
+      "tooltipCoords": "({{x}}, {{y}})"
+    }
+  },
+  "packages": {
+    "title": "Pacotes",
+    "loading": "Carregando pacotes...",
+    "empty": "Nenhum pacote cadastrado.",
+    "columns": {
+      "recipient": "Destinatário",
+      "x": "X",
+      "y": "Y",
+      "weight": "Peso (kg)",
+      "accessCost": "Acesso",
+      "actions": "Ações"
+    },
+    "actions": {
+      "remove": "Remover",
+      "confirmRemove": "Remover pacote?",
+      "confirmRemoveDesc": "Esta ação não pode ser desfeita.",
+      "confirm": "Confirmar",
+      "cancel": "Cancelar"
+    },
+    "toasts": {
+      "removed": "Pacote removido.",
+      "removeError": "Erro ao remover pacote."
+    }
+  },
+  "vehicles": {
+    "title": "Veículos",
+    "loading": "Carregando veículos...",
+    "empty": "Nenhum veículo cadastrado.",
+    "columns": {
+      "plate": "Placa",
+      "maxWeight": "Capacidade (kg)",
+      "createdAt": "Cadastrado em"
+    }
+  },
+  "hubs": {
+    "title": "Hubs de Distribuição",
+    "loading": "Carregando hubs...",
+    "empty": "Nenhum hub cadastrado.",
+    "columns": {
+      "name": "Nome",
+      "x": "X",
+      "y": "Y",
+      "type": "Tipo"
+    },
+    "types": {
+      "central": "Central",
+      "secondary": "Secundário"
+    }
+  },
+  "common": {
+    "error": "Erro: {{message}}",
+    "loading": "Carregando...",
+    "notFound": "Não encontrado.",
+    "breadcrumb": "{{parent}} / {{child}}"
+  }
+}

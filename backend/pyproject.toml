@@ -1,0 +1,100 @@
+[tool.poetry]
+name = "fasttrack-backend"
+version = "0.1.0"
+description = "FastTrack — Motor de Roteirização Multi-Objetivo (backend)"
+authors = []
+readme = "README.md"
+packages = [
+    { include = "api" },
+    { include = "app" },
+    { include = "core" },
+    { include = "routing" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.118.0"
+uvicorn = { version = "^0.37.0", extras = ["standard"] }
+gunicorn = "^23.0.0"
+sqlalchemy = { version = "^2.0.0", extras = ["asyncio"] }
+asyncpg = "^0.31.0"
+alembic = "^1.16.0"
+pydantic = "^2.11.0"
+pydantic-settings = "^2.7.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.25.0"
+pytest-cov = "^6.0.0"
+httpx = "^0.28.0"
+aiosqlite = "^0.20.0"
+faker = "^33.0.0"
+ruff = "^0.8.0"
+mypy = "^1.14.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = [
+    "-v",
+    "--cov=.",
+    "--cov-report=xml:coverage.xml",
+    "--cov-report=term-missing",
+    "--cov-fail-under=80",
+]
+
+[tool.coverage.run]
+omit = [
+    "tests/*",
+    "alembic/*",
+    "alembic/env.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "@abstractmethod",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "W",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "B",
+    "SIM",
+    "ANN",
+]
+ignore = [
+    "ANN101",
+    "ANN102",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["api", "app", "core", "routing"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = "alembic.*"
+ignore_errors = true
